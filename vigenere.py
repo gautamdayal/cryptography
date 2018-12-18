@@ -22,7 +22,7 @@ def vigenere(plaintext, keyword, action):
     for c in plaintext: 
         cursor = i % length
 
-        if c.isalpha():
+        if c in alphabet:
             cipherlist.append(alphabet[(charVal(c) + keylist[cursor]) % 26 - 1])
         else:
             cipherlist.append(c)
