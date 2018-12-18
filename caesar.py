@@ -13,7 +13,7 @@ def cipher():
     shift = int(shiftentry.get())
                 
     for c in plaintext:
-        if c == ' ' or c == '.':
+        if not in alphabet:
             cipherlist.append(c)
         else:
             cipherlist.append(alphabet[getCharVal(c) + shift])
