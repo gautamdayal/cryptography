@@ -7,7 +7,6 @@ def charVal(c):
 def vigenere(plaintext, keyword, action):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     keyword = keyword.lower()
-    
     if action == 'e':
         keylist = [charVal(c) for c in keyword]
     elif action == 'd':
@@ -21,7 +20,7 @@ def vigenere(plaintext, keyword, action):
     
     for c in plaintext: 
         cursor = i % length
-
+        
         if c in alphabet:
             cipherlist.append(alphabet[(charVal(c) + keylist[cursor]) % 26 - 1])
         else:
