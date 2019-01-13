@@ -15,14 +15,18 @@ def substitution(plaintext, givekey = False):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     L = randomAlpha()
     mapping = {}
+    
     for i in range(26):
         mapping[alphabet[i]] = L[i]
     cipherList = []
+    
     for c in plaintext:
         if c in alphabet:
             cipherList.append(mapping[c])
         else:
             cipherList.append(c)
+            
     if givekey:
         print('key: ', mapping)    
+        
     print('msg: '+ ''.join(cipherList))
