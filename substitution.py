@@ -9,20 +9,20 @@ def randomAlpha():
         p.remove(p[x])
     return c
     
-# Implementation of the substitution cipher
-def substitution(plaintext):
+# Implementation of the substitution cipher. Specify whether to print letter mapping by saying 'True' in optional arg.
+def substitution(plaintext, givekey = False):
+    plaintext = plaintext.lower()
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     L = randomAlpha()
     mapping = {}
-    
     for i in range(26):
         mapping[alphabet[i]] = L[i]
     cipherList = []
-    
     for c in plaintext:
         if c in alphabet:
             cipherList.append(mapping[c])
         else:
-            cipherList.append(mapping[c])
-            
-    return ''.join(cipherList)
+            cipherList.append(c)
+    if givekey:
+        print('key: ', mapping)    
+    print('msg: '+ ''.join(cipherList))
