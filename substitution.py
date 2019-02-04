@@ -1,3 +1,5 @@
+import math2.py
+
 # Produces a list containing the alphabet in a randomized, scrambled order.
 def randomAlpha():
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
