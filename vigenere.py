@@ -11,8 +11,6 @@ def vigenere(plaintext, keyword, action):
         keylist = [charVal(c) for c in keyword]
     elif action == 'd':
         keylist = [-charVal(c) for c in keyword]
-    else:
-        print('enter e for encrypt and d for decrypt')
         
     cipherlist = []
     i = 0
