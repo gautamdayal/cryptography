@@ -4,7 +4,7 @@ def charVal(c):
     return ord(c) - 96
 
 # User specifies action argument as 'e' for encryption and 'd' for decryption. Defaults to 'e'
-def vigenere(plaintext, keyword, action):
+def vigenere(plaintext, keyword, action='e'):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     keyword = keyword.lower()
     if action == 'e':
